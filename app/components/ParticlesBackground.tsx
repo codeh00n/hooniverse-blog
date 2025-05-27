@@ -67,17 +67,27 @@ function FloatingDots() {
       dots[i * 3 + 1] = (Math.random() - 0.5) * 40
       dots[i * 3 + 2] = (Math.random() - 0.5) * 20
     }
-    return [dots]
-  }, [])
+    return [dots]  }, [])
 
   useFrame((state) => {
     if (ref.current) {
       const time = state.clock.getElapsedTime()
       
-      // 반대 방향 회전으로 레이어 효과
-      ref.current.rotation.x = -time * 0.02 + mouse.y * 0.3
-      ref.current.rotation.y = time * 0.03 + mouse.x * 0.3
-      ref.current.rotation.z = -time * 0.01
+      // 첫 번째 파티클과 비슷한 마우스 인터랙션
+      const mouseInfluence = 0.4
+      ref.current.rotation.x = THREE.MathUtils.lerp(
+        ref.current.rotation.x,
+        -mouse.y * mouseInfluence,
+        0.09
+      )
+      ref.current.rotation.y = THREE.MathUtils.lerp(
+        ref.current.rotation.y,
+        mouse.x * mouseInfluence,
+        0.09
+      )
+      
+      // 기본 회전 - 거의 비슷한 속도로 통일감 연출
+      ref.current.rotation.z = time * 0.04
     }
   })
 

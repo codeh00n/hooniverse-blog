@@ -33,6 +33,29 @@ html {
   min-width: 360px;
 }
 
+/* Three.js 배경이 항상 검은색으로 유지되도록 */
+#three-canvas-container,
+canvas {
+  background: #000 !important;
+}
+
+/* 라이트 모드에서도 Three.js 영역 검은 배경 유지 */
+body {
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  z-index: -20;
+  pointer-events: none;
+}
+
 .prose .anchor {
   @apply absolute invisible no-underline;
 
@@ -147,4 +170,16 @@ table {
 
 .title {
   text-wrap: balance;
+}
+
+/* Three.js 배경이 항상 검은색으로 유지되도록 */
+#three-canvas-container,
+canvas {
+  background: #000 !important;
+}
+
+/* Three.js 컨테이너 전용 스타일 */
+#three-canvas-container {
+  background-color: #000 !important;
+  background-image: none !important;
 }

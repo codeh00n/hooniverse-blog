@@ -434,16 +434,32 @@ function BrightStars() {
 
 export default function ParticlesBackground() {
   return (
-    <div className="fixed inset-0 -z-10 pointer-events-none">
+    <div 
+      id="three-canvas-container"
+      className="fixed inset-0 -z-10 pointer-events-none" 
+      style={{ 
+        background: '#000 !important',
+        backgroundColor: '#000',
+        backgroundImage: 'none'
+      }}
+    >
       <Canvas
         camera={{ position: [0, 0, 5], fov: 60, near: 0.1, far: 1000 }}
         style={{ 
-          background: 'transparent',
+          background: '#000 !important',
+          backgroundColor: '#000',
           width: '100%',
           height: '100%'
         }}
+        gl={{ antialias: true, alpha: false }}
+        onCreated={({ gl }) => {
+          gl.setClearColor('#000000', 1.0)
+          gl.domElement.style.background = '#000'
+          gl.domElement.style.backgroundColor = '#000'
+        }}
         dpr={[1, 2]}
       >
+        <color attach="background" args={['black']} />
         {/* 배경부터 앞쪽 순서로 배치 */}
         <BrightStars />
         <NebulaShader />

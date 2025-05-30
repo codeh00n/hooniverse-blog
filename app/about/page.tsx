@@ -148,9 +148,9 @@ export default function About() {
               description: "AI 도구들을 활용한 개발과 창작 활동",
             },
             {
-              icon: "📱",
-              title: "모바일 개발",
-              description: "크로스 플랫폼 모바일 앱 개발",
+              icon: "🎮",
+              title: "게임 개발",
+              description: "Unity를 활용한 2D/3D 게임 개발",
             },
           ].map((interest, index) => (
             <div

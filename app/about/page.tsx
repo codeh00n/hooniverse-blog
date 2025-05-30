@@ -144,8 +144,8 @@ export default function About() {
             },
             {
               icon: "🤖",
-              title: "AI/ML",
-              description: "인공지능과 머신러닝 기술에 대한 탐구",
+              title: "AI 활용",
+              description: "AI 도구들을 활용한 개발과 창작 활동",
             },
             {
               icon: "📱",

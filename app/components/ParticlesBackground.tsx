@@ -79,7 +79,7 @@ export default function ParticlesBackground() {
 
   return (
     <>
-      <style jsx>{`
+      <style jsx data-oid="6n2o7vh">{`
         @keyframes float {
           0% {
             transform: translateY(0px) translateX(0px) rotate(0deg);
@@ -168,6 +168,7 @@ export default function ParticlesBackground() {
           backgroundSize: "400% 400%",
           animation: "gradient-shift 20s ease infinite",
         }}
+        data-oid="nlpyie3"
       >
         {/* Static subtle gradient overlays */}
         <div
@@ -178,6 +179,7 @@ export default function ParticlesBackground() {
             filter: "blur(60px)",
             animation: "subtle-pulse 12s ease-in-out infinite",
           }}
+          data-oid="5ac9hwp"
         />
 
         <div
@@ -188,6 +190,7 @@ export default function ParticlesBackground() {
             filter: "blur(50px)",
             animation: "subtle-pulse 15s ease-in-out infinite reverse",
           }}
+          data-oid="e54s:4d"
         />
 
         <div
@@ -198,6 +201,7 @@ export default function ParticlesBackground() {
             filter: "blur(45px)",
             animation: "subtle-pulse 18s ease-in-out infinite",
           }}
+          data-oid="dj8:ii:"
         />
       </div>
     </>

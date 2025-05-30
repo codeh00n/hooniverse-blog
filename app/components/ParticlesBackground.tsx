@@ -1,16 +1,27 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 // Elegant animated background with CSS and subtle animations
 export default function ParticlesBackground() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  // 마우스 움직임 추적
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
 
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
 
-    // Create floating elements
+    // Create floating elements with mouse interaction
     const createFloatingElement = () => {
       const element = document.createElement("div");
       element.className = "floating-element";
@@ -40,6 +51,9 @@ export default function ParticlesBackground() {
         opacity.toString(),
       );
 
+      // Add mouse interaction effect
+      const parallaxFactor = 0.5 + Math.random() * 1.5; // 0.5-2.0 for varied effect
+      
       element.style.cssText = `
         position: absolute;
         left: ${startX}px;
@@ -52,7 +66,11 @@ export default function ParticlesBackground() {
         animation: float ${duration}s linear infinite;
         filter: blur(1px);
         box-shadow: 0 0 ${size * 2}px ${color};
+        transition: transform 0.3s ease-out;
       `;
+
+      // Store parallax factor as a data attribute
+      element.setAttribute('data-parallax', parallaxFactor.toString());
 
       container.appendChild(element);
 
@@ -77,9 +95,29 @@ export default function ParticlesBackground() {
     };
   }, []);
 
+  // 마우스 위치에 따른 파티클 패럴럭스 효과
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container || typeof window === 'undefined') return;
+
+    const particles = container.querySelectorAll('.floating-element');
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+
+    particles.forEach((particle) => {
+      const element = particle as HTMLElement;
+      const parallaxFactor = parseFloat(element.getAttribute('data-parallax') || '1');
+      
+      const offsetX = (mousePosition.x - centerX) * parallaxFactor * 0.02;
+      const offsetY = (mousePosition.y - centerY) * parallaxFactor * 0.02;
+      
+      element.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+    });
+  }, [mousePosition]);
+
   return (
     <>
-      <style jsx data-oid="6n2o7vh">{`
+      <style jsx>{`
         @keyframes float {
           0% {
             transform: translateY(0px) translateX(0px) rotate(0deg);
@@ -168,40 +206,45 @@ export default function ParticlesBackground() {
           backgroundSize: "400% 400%",
           animation: "gradient-shift 20s ease infinite",
         }}
-        data-oid="nlpyie3"
       >
-        {/* Static subtle gradient overlays */}
+        {/* Static subtle gradient overlays with mouse parallax effect */}
         <div
-          className="absolute top-1/4 left-1/3 w-96 h-96 rounded-full opacity-20"
+          className="absolute top-1/4 left-1/3 w-96 h-96 rounded-full opacity-20 transition-transform duration-500 ease-out"
           style={{
             background:
               "radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, transparent 60%)",
             filter: "blur(60px)",
             animation: "subtle-pulse 12s ease-in-out infinite",
+            transform: typeof window !== 'undefined' 
+              ? `translate(${(mousePosition.x - window.innerWidth / 2) * 0.02}px, ${(mousePosition.y - window.innerHeight / 2) * 0.02}px)`
+              : 'translate(0px, 0px)',
           }}
-          data-oid="5ac9hwp"
         />
 
         <div
-          className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full opacity-20"
+          className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full opacity-20 transition-transform duration-700 ease-out"
           style={{
             background:
               "radial-gradient(circle, rgba(8, 145, 178, 0.3) 0%, transparent 60%)",
             filter: "blur(50px)",
             animation: "subtle-pulse 15s ease-in-out infinite reverse",
+            transform: typeof window !== 'undefined'
+              ? `translate(${(mousePosition.x - window.innerWidth / 2) * -0.015}px, ${(mousePosition.y - window.innerHeight / 2) * -0.015}px)`
+              : 'translate(0px, 0px)',
           }}
-          data-oid="e54s:4d"
         />
 
         <div
-          className="absolute top-1/2 left-1/4 w-64 h-64 rounded-full opacity-15"
+          className="absolute top-1/2 left-1/4 w-64 h-64 rounded-full opacity-15 transition-transform duration-1000 ease-out"
           style={{
             background:
               "radial-gradient(circle, rgba(245, 158, 11, 0.3) 0%, transparent 60%)",
             filter: "blur(45px)",
             animation: "subtle-pulse 18s ease-in-out infinite",
+            transform: typeof window !== 'undefined'
+              ? `translate(${(mousePosition.x - window.innerWidth / 2) * 0.025}px, ${(mousePosition.y - window.innerHeight / 2) * 0.025}px)`
+              : 'translate(0px, 0px)',
           }}
-          data-oid="dj8:ii:"
         />
       </div>
     </>

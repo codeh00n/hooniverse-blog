@@ -6,26 +6,22 @@ import React from "react";
 
 function Table({ data }) {
   let headers = data.headers.map((header, index) => (
-    <th key={index} data-oid="xpviw:6">
-      {header}
-    </th>
+    <th key={index}>{header}</th>
   ));
   let rows = data.rows.map((row, index) => (
-    <tr key={index} data-oid="0ah.d-p">
+    <tr key={index}>
       {row.map((cell, cellIndex) => (
-        <td key={cellIndex} data-oid="h:goy-f">
-          {cell}
-        </td>
+        <td key={cellIndex}>{cell}</td>
       ))}
     </tr>
   ));
 
   return (
-    <table data-oid="h5_nxn8">
-      <thead data-oid="y3-wd0.">
-        <tr data-oid="j58dc7-">{headers}</tr>
+    <table>
+      <thead>
+        <tr>{headers}</tr>
       </thead>
-      <tbody data-oid="9_ndx5u">{rows}</tbody>
+      <tbody>{rows}</tbody>
     </table>
   );
 }
@@ -35,46 +31,26 @@ function CustomLink(props) {
 
   if (href.startsWith("/")) {
     return (
-      <Link href={href} {...props} data-oid="gudgo5h">
+      <Link href={href} {...props}>
         {props.children}
       </Link>
     );
   }
 
   if (href.startsWith("#")) {
-    return <a {...props} data-oid="56ufnbi" />;
+    return <a {...props} />;
   }
 
-  return (
-    <a
-      target="_blank"
-      rel="noopener noreferrer"
-      {...props}
-      data-oid="uv5v60r"
-    />
-  );
+  return <a target="_blank" rel="noopener noreferrer" {...props} />;
 }
 
 function RoundedImage(props) {
-  return (
-    <Image
-      alt={props.alt}
-      className="rounded-lg"
-      {...props}
-      data-oid="mfw5v59"
-    />
-  );
+  return <Image alt={props.alt} className="rounded-lg" {...props} />;
 }
 
 function Code({ children, ...props }) {
   let codeHTML = highlight(children);
-  return (
-    <code
-      dangerouslySetInnerHTML={{ __html: codeHTML }}
-      {...props}
-      data-oid="586o6ed"
-    />
-  );
+  return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />;
 }
 
 function slugify(str) {
@@ -129,7 +105,6 @@ export function CustomMDX(props) {
     <MDXRemote
       {...props}
       components={{ ...components, ...(props.components || {}) }}
-      data-oid="rmaepi0"
     />
   );
 }

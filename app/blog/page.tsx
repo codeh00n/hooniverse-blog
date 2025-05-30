@@ -8,16 +8,13 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <div className="relative" data-oid="tb9m5sc">
-      <ParticlesBackground data-oid=":oizbux" />
-      <section data-oid="g-6.vro">
-        <h1
-          className="font-semibold text-2xl mb-8 tracking-tighter"
-          data-oid="s71c.lj"
-        >
+    <div className="relative">
+      <ParticlesBackground />
+      <section>
+        <h1 className="font-semibold text-2xl mb-8 tracking-tighter">
           My Blog
         </h1>
-        <BlogPosts data-oid="3fkqpbr" />
+        <BlogPosts />
       </section>
     </div>
   );

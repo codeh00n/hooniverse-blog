@@ -26,14 +26,13 @@ export function Navbar() {
   const pathname = usePathname();
 
   return (
-    <aside className="-ml-[8px] mb-16 tracking-tight" data-oid="uc9c50l">
-      <div className="lg:sticky lg:top-20" data-oid="7u9t14m">
+    <aside className="-ml-[8px] mb-16 tracking-tight">
+      <div className="lg:sticky lg:top-20">
         {/* Logo/Brand */}
-        <div className="mb-8" data-oid="f5o4-df">
+        <div className="mb-8">
           <Link
             href="/"
             className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
-            data-oid="b7v-shp"
           >
             HOONIVERSE
           </Link>
@@ -42,9 +41,8 @@ export function Navbar() {
         <nav
           className="flex flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
           id="nav"
-          data-oid="vpaoexl"
         >
-          <div className="flex flex-row space-x-1 pr-10" data-oid="yh283-x">
+          <div className="flex flex-row space-x-1 pr-10">
             {Object.entries(navItems).map(([path, { name, icon }]) => {
               const isActive = pathname === path;
               return (
@@ -59,19 +57,11 @@ export function Navbar() {
                         : "hover:bg-neutral-100 dark:hover:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100"
                     }
                   `}
-                  data-oid="2c6pl46"
                 >
-                  <span className="text-sm" data-oid="c.oc11-">
-                    {icon}
-                  </span>
-                  <span className="font-medium" data-oid="3c21rd:">
-                    {name}
-                  </span>
+                  <span className="text-sm">{icon}</span>
+                  <span className="font-medium">{name}</span>
                   {isActive && (
-                    <div
-                      className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-500 rounded-full"
-                      data-oid="bqjzq:7"
-                    />
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-500 rounded-full" />
                   )}
                 </Link>
               );

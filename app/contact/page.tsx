@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
@@ -16,26 +15,6 @@ export default function Contact() {
     }
   };
 
-  const socialLinks = [
-    {
-      name: "GitHub",
-      icon: "🐙",
-      url: "#",
-      description: "코드와 프로젝트를 확인하세요",
-    },
-    {
-      name: "LinkedIn",
-      icon: "💼",
-      url: "#",
-      description: "전문적인 네트워킹",
-    },
-    {
-      name: "Twitter",
-      icon: "🐦",
-      url: "#",
-      description: "일상과 개발 이야기",
-    },
-  ];
 
   return (
     <section className="space-y-8">
@@ -77,79 +56,6 @@ export default function Contact() {
               {copied ? "✅ 복사됨!" : "📋 복사"}
             </button>
           </div>
-        </div>
-      </div>
-
-      {/* Social Links */}
-      <div className="space-y-6">
-        <h2 className="text-2xl font-semibold tracking-tight">소셜 미디어</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {socialLinks.map((social, index) => (
-            <Link
-              key={index}
-              href={social.url}
-              className="group p-6 rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700 transition-all duration-200 hover:shadow-lg"
-            >
-              <div className="flex items-center space-x-3 mb-3">
-                <span className="text-2xl">{social.icon}</span>
-                <h3 className="font-semibold group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                  {social.name}
-                </h3>
-              </div>
-              <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                {social.description}
-              </p>
-            </Link>
-          ))}
-        </div>
-      </div>
-
-      {/* Contact Form */}
-      <div className="space-y-6">
-        <h2 className="text-2xl font-semibold tracking-tight">메시지 보내기</h2>
-        <div className="p-6 rounded-xl bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800">
-          <form className="space-y-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-sm font-medium mb-2">이름</label>
-                <input
-                  type="text"
-                  className="w-full px-3 py-2 border border-neutral-300 dark:border-neutral-600 rounded-lg bg-white dark:bg-neutral-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder="홍길동"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2">이메일</label>
-                <input
-                  type="email"
-                  className="w-full px-3 py-2 border border-neutral-300 dark:border-neutral-600 rounded-lg bg-white dark:bg-neutral-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder="example@email.com"
-                />
-              </div>
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-2">제목</label>
-              <input
-                type="text"
-                className="w-full px-3 py-2 border border-neutral-300 dark:border-neutral-600 rounded-lg bg-white dark:bg-neutral-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                placeholder="문의 제목"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-2">메시지</label>
-              <textarea
-                rows={5}
-                className="w-full px-3 py-2 border border-neutral-300 dark:border-neutral-600 rounded-lg bg-white dark:bg-neutral-800 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
-                placeholder="메시지를 입력해주세요..."
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium"
-            >
-              메시지 보내기
-            </button>
-          </form>
         </div>
       </div>
 

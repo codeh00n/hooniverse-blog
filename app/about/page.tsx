@@ -78,6 +78,29 @@ export default function About() {
               ))}
             </div>
           </div>
+        </div>      </div>
+
+      {/* Algorithm Section */}
+      <div className="space-y-6">
+        <h2 className="text-2xl font-semibold tracking-tight">알고리즘</h2>
+        <div className="p-6 rounded-xl bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800">
+          <div className="flex items-center space-x-4">
+            <div className="text-4xl">🧮</div>
+            <div className="flex-1">
+              <h3 className="font-semibold text-lg mb-2">백준 온라인 저지</h3>
+              <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-3">
+                알고리즘 문제 해결을 통해 논리적 사고력과 프로그래밍 실력을 향상시키고 있습니다.
+              </p>
+              <a
+                href="https://solved.ac/profile/ghdtjr9ns"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors text-sm"
+              >
+                백준 프로필 보기 →
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 

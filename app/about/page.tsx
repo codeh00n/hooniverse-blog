@@ -27,10 +27,12 @@ export default function About() {
             </h3>
             <div className="space-y-3">
               {[
-                { name: "React", level: 85 },
-                { name: "Next.js", level: 80 },
-                { name: "TypeScript", level: 75 },
-                { name: "Tailwind CSS", level: 90 },
+                { name: "JSP", level: 65 },
+                { name: "React", level: 55 },
+                { name: "Next.js", level: 50 },
+                { name: "TypeScript", level: 50 },
+                { name: "Tailwind CSS", level: 55 },
+                { name: "Three.js", level: 50 },
               ].map((skill) => (
                 <div key={skill.name} className="space-y-2">
                   <div className="flex justify-between">
@@ -56,10 +58,11 @@ export default function About() {
             </h3>
             <div className="space-y-3">
               {[
-                { name: "Node.js", level: 70 },
-                { name: "Python", level: 75 },
-                { name: "Git", level: 85 },
-                { name: "Database", level: 65 },
+                { name: "Python", level: 65 },
+                { name: "After Effects", level: 55 },
+                { name: "Unity", level: 60 },
+                { name: "Node.js", level: 55 },
+                { name: "Git", level: 60 },
               ].map((skill) => (
                 <div key={skill.name} className="space-y-2">
                   <div className="flex justify-between">
@@ -128,7 +131,7 @@ export default function About() {
               </span>
             </div>
             <p className="text-sm text-neutral-600 dark:text-neutral-400">
-              컴퓨터 과학의 기초부터 실무까지, 체계적인 소프트웨어 개발 방법론을
+              소프트웨어 개발의 기초부터 심화까지, 체계적인 개발 방법론을
               학습하고 있습니다.
             </p>
           </div>
@@ -136,8 +139,8 @@ export default function About() {
           <div className="border-l-4 border-green-500 pl-6 py-4">
             <h3 className="font-semibold mb-2">개인 프로젝트 개발</h3>
             <p className="text-sm text-neutral-600 dark:text-neutral-400">
-              웹 애플리케이션, Unity 게임, AI 도구 활용 프로젝트 등 다양한
-              분야의 개발을 통해 실무 경험을 쌓고 있습니다.
+              웹 애플리케이션, Unity 게임, AI 도구 등 다양한 분야의 개발
+              프로젝트 경험을 쌓고 있습니다.
             </p>
           </div>
         </div>

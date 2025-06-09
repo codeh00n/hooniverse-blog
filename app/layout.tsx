@@ -44,11 +44,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html
+  return (    <html
       lang="en"
       className={cx(
-        "text-[var(--text-primary)] bg-[var(--bg-secondary)] dark:text-[var(--text-primary)] dark:bg-[var(--bg-primary)]",
+        "dark text-[var(--text-primary)] bg-[var(--bg-primary)]",
         GeistSans.variable,
         GeistMono.variable,
       )}

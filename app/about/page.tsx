@@ -7,10 +7,10 @@ export default function About() {
 
       {/* Personal Introduction */}
       <div className="space-y-6">        <div className="prose prose-neutral dark:prose-invert max-w-none">
-          <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+          <p className="text-lg leading-relaxed text-white">
             안녕하세요! 소프트웨어공학과 학부생으로 웹 개발 분야의 전문성을 키워가고 있는 개발자입니다.
           </p>
-          <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+          <p className="text-lg leading-relaxed text-white">
             학부 과정에서 습득한 이론적 지식을 바탕으로 다양한 개인 프로젝트와 팀 프로젝트를 진행하며 개발 경험을 쌓고 있습니다. 새로운 기술을 학습하고 사용자 중심의 서비스를 만드는 일에 열정을 가지고 있으며, 지속적인 성장을 통해 더 나은 개발자가 되고자 합니다.
           </p>
         </div>

@@ -8,17 +8,13 @@ const projects = [
     status: "완료",
     github: "https://github.com/codeh00n",
     demo: "#",
-  },
-  {
-    title: "블로그 시스템",
+  },  {
+    title: "Arcana Rounds",
     description:
-      "MDX를 활용한 정적 블로그 시스템입니다. 마크다운으로 작성된 글을 웹페이지로 변환합니다.",
-    status: "진행중",
-    github: "https://github.com/codeh00n",
-    demo: "#",
-  },
-  {
-    title: "Unity 드론 시뮬레이터",
+      "Unity 엔진을 사용하여 개발중인 액션 RPG 게임입니다. 마법과 전투 시스템을 중심으로 한 라운드 기반 게임플레이를 제공합니다.",
+    status: "개발중",
+  },  {
+    title: "Unity 드론\n시뮬레이터",
     description:
       "Unity 엔진을 사용하여 제작한 드론 시뮬레이션 프로그램입니다. 물리 기반 드론 조종과 다양한 환경을 체험할 수 있습니다.",
     status: "완료",
@@ -29,12 +25,10 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="space-y-8">
-      <div>
+    <section className="space-y-8">      <div>
         <h1 className="mb-4 text-3xl font-bold tracking-tight text-[var(--text-primary)]">Projects</h1>
         <p className="text-lg text-[var(--text-muted)]">
-          제가 개발한 프로젝트들을 소개합니다. 각 프로젝트를 통해 새로운 기술을
-          배우고 실무 경험을 쌓고 있습니다.
+          제가 개발한 프로젝트들을 소개합니다. 각 프로젝트를 통해 새로운 기술을 배우고 개발 역량을 키워가고 있습니다.
         </p>
       </div>
         {/* Featured Projects */}
@@ -51,12 +45,13 @@ export default function Projects() {
                 <div className="flex items-center justify-between">
                   <h3 className="font-semibold text-lg text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     {project.title}
-                  </h3>
-                  <span
-                    className={`px-2 py-1 text-xs rounded-full ${
+                  </h3>                  <span
+                    className={`px-2 py-1 text-xs rounded-lg ${
                       project.status === "완료"
                         ? "bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300"
-                        : "bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300"
+                        : project.status === "개발중"
+                        ? "bg-orange-100 dark:bg-orange-900 text-orange-700 dark:text-orange-300"
+                        : "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300"
                     }`}
                   >
                     {project.status}
@@ -107,10 +102,9 @@ export default function Projects() {
           </h3>
           <p className="text-[var(--text-muted)]">
             GitHub에서 더 많은 프로젝트와 코드를 확인하실 수 있습니다.
-          </p>
-          <Link
+          </p>          <Link
             href="https://github.com/codeh00n"
-            className="inline-flex items-center px-4 py-2 bg-[var(--color-2)] hover:bg-[var(--color-3)] text-[var(--background)] rounded-lg transition-colors"
+            className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
           >
             GitHub 방문하기 →
           </Link>

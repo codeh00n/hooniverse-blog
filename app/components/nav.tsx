@@ -41,21 +41,19 @@ export function Navbar() {
                         ? "text-white"
                         : "hover:bg-opacity-10 hover:bg-gray-500"
                     }
-                  `}
-                  style={{
+                  `}                  style={{
                     backgroundColor: isActive
-                      ? "var(--color-4)"
+                      ? "#4A90E2"
                       : "transparent",
                     color: isActive
-                      ? "var(--color-1)"
-                      : "var(--text-secondary)",
+                      ? "#ffffff"
+                      : "#ffffff",
                   }}
                 >
-                  <span className="font-medium">{name}</span>{" "}
-                  {isActive && (
+                  <span className="font-medium">{name}</span>{" "}                  {isActive && (
                     <div
                       className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full"
-                      style={{ backgroundColor: "var(--color-1)" }}
+                      style={{ backgroundColor: "#ffffff" }}
                     />
                   )}
                 </Link>

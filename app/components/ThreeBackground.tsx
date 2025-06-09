@@ -20,7 +20,6 @@ function CodeSnippet({ position, code }: CodeSnippetProps) {
       mesh.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.5) * 0.1;
     }
   });
-
   return (
     <Float speed={1.5} rotationIntensity={0.5} floatIntensity={0.5}>
       {" "}
@@ -28,7 +27,7 @@ function CodeSnippet({ position, code }: CodeSnippetProps) {
         ref={mesh}
         position={position}
         fontSize={0.3}
-        color="#EDF252"
+        color="#4A90E2"
         anchorX="center"
         anchorY="middle"
       >

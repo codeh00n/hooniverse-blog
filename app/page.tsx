@@ -8,8 +8,7 @@ export default function Page() {
         <div className="space-y-8">
           {" "}          <h1 className="font-bold tracking-tight leading-tight">
             <span
-              className="text-2xl md:text-3xl lg:text-4xl"
-              style={{ color: "var(--color-2)" }}
+              className="text-2xl md:text-3xl lg:text-4xl text-blue-500"
             >
               안녕하세요. 저는 웹 개발자
             </span>

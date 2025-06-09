@@ -20,33 +20,68 @@ export default function About() {
       <div className="space-y-6">
         <h2 className="text-2xl font-semibold tracking-tight">기술 스택</h2>
 
-        <div className="overflow-x-auto">
-          <table className="min-w-full text-sm border border-neutral-200 dark:border-neutral-700">
-            <thead>
-              <tr className="bg-neutral-50 dark:bg-neutral-800">
-                <th className="px-4 py-2 border-b">분야</th>
-                <th className="px-4 py-2 border-b">주요 기술 (Top 3)</th>
-                <th className="px-4 py-2 border-b">숙련도</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="px-4 py-2 border-b">프론트엔드</td>
-                <td className="px-4 py-2 border-b">React, Next.js, Tailwind CSS</td>
-                <td className="px-4 py-2 border-b">50%</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-2 border-b">백엔드 &amp; 툴</td>
-                <td className="px-4 py-2 border-b">Python, Git, Node.js</td>
-                <td className="px-4 py-2 border-b">55%</td>
-              </tr>
-              <tr>
-                <td className="px-4 py-2">3D/게임 개발</td>
-                <td className="px-4 py-2">Unity, Three.js</td>
-                <td className="px-4 py-2">50%</td>
-              </tr>
-            </tbody>
-          </table>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="space-y-4">
+            <h3 className="text-lg font-medium text-blue-600 dark:text-blue-400">
+              Frontend
+            </h3>
+            <div className="space-y-3">
+              {[
+                { name: "JSP", level: 65 },
+                { name: "React", level: 55 },
+                { name: "Next.js", level: 50 },
+                { name: "TypeScript", level: 50 },
+                { name: "Tailwind CSS", level: 50 },
+                { name: "Three.js", level: 45 },
+              ].map((skill) => (
+                <div key={skill.name} className="space-y-2">
+                  <div className="flex justify-between">
+                    <span className="text-sm font-medium">{skill.name}</span>
+                    <span className="text-sm text-neutral-500">
+                      {skill.level}%
+                    </span>
+                  </div>
+                  <div className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2">
+                    <div
+                      className="bg-blue-500 h-2 rounded-full transition-all duration-1000 ease-out"
+                      style={{ width: `${skill.level}%` }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-lg font-medium text-purple-600 dark:text-purple-400">
+              Backend &amp; Tools
+            </h3>
+            <div className="space-y-3">
+              {[
+                { name: "Python", level: 65 },
+                { name: "C#", level: 55 },
+                { name: "After Effects", level: 60 },
+                { name: "Unity", level: 60 },
+                { name: "Node.js", level: 50 },
+                { name: "Git", level: 55 },
+              ].map((skill) => (
+                <div key={skill.name} className="space-y-2">
+                  <div className="flex justify-between">
+                    <span className="text-sm font-medium">{skill.name}</span>
+                    <span className="text-sm text-neutral-500">
+                      {skill.level}%
+                    </span>
+                  </div>
+                  <div className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2">
+                    <div
+                      className="bg-purple-500 h-2 rounded-full transition-all duration-1000 ease-out"
+                      style={{ width: `${skill.level}%` }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 

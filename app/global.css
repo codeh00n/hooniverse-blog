@@ -1,32 +1,62 @@
 @import 'tailwindcss';
 
-::selection {
-  background-color: #47a3f3;
-  color: #fefefe;
-}
-
+/* Custom Color Palette */
 :root {
-  --sh-class: #2d5e9d;
-  --sh-identifier: #354150;
-  --sh-sign: #8996a3;
-  --sh-string: #007f7a;
-  --sh-keyword: #e02518;
-  --sh-comment: #a19595;
-  --sh-jsxliterals: #6266d1;
-  --sh-property: #e25a1c;
-  --sh-entity: #e25a1c;
+  /* Grayscale Design Colors */
+  --color-1: #F2F2F2; /* 가장 밝은 회색 */
+  --color-2: #A6A6A6; /* 중간 밝은 회색 */
+  --color-3: #737373; /* 중간 회색 */
+  --color-4: #404040; /* 중간 어두운 회색 */
+  --color-5: #0D0D0D; /* 가장 어두운 회색 */
+  
+  /* Light mode colors */
+  --bg-primary: var(--color-1);
+  --bg-secondary: #FFFFFF;
+  --text-primary: var(--color-5);
+  --text-secondary: var(--color-4);
+  --text-tertiary: var(--color-3);
+  --border-color: var(--color-2);
+  
+  /* Syntax highlighting for light mode */
+  --sh-class: var(--color-4);
+  --sh-identifier: var(--color-5);
+  --sh-sign: var(--color-3);
+  --sh-string: var(--color-4);
+  --sh-keyword: var(--color-5);
+  --sh-comment: var(--color-3);
+  --sh-jsxliterals: var(--color-4);
+  --sh-property: var(--color-5);
+  --sh-entity: var(--color-5);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --sh-class: #4c97f8;
-    --sh-identifier: white;
-    --sh-keyword: #f47067;
-    --sh-string: #0fa295;
+    /* Dark mode colors */
+    --bg-primary: var(--color-5);
+    --bg-secondary: var(--color-4);
+    --text-primary: var(--color-1);
+    --text-secondary: var(--color-2);
+    --text-tertiary: var(--color-3);
+    --border-color: var(--color-3);
+    
+    /* Syntax highlighting for dark mode */
+    --sh-class: var(--color-2);
+    --sh-identifier: var(--color-1);
+    --sh-keyword: var(--color-1);
+    --sh-string: var(--color-2);
+    --sh-comment: var(--color-3);
+    --sh-jsxliterals: var(--color-2);
+    --sh-property: var(--color-1);
+    --sh-entity: var(--color-1);
   }
   html {
     color-scheme: dark;
   }
+}
+
+::selection {
+  background-color: var(--color-3);
+  color: var(--color-1);
 }
 
 html {
@@ -36,7 +66,7 @@ html {
 /* Three.js 배경 관련 스타일 */
 body {
   position: relative;
-  background: #000; /* 기본 검은 배경 */
+  background: var(--color-5); /* 가장 어두운 회색 배경 */
 }
 
 /* Three.js Canvas 컨테이너 */
@@ -47,13 +77,13 @@ body {
   width: 100%;
   height: 100%;
   z-index: -10;
-  background: #000 !important;
+  background: var(--color-5) !important;
   background-image: none !important;
 }
 
 /* Canvas 요소 스타일 */
 canvas {
-  background: #000 !important;
+  background: var(--color-5) !important;
   display: block;
   outline: none;
 }

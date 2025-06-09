@@ -6,19 +6,15 @@ import { usePathname } from "next/navigation";
 const navItems = {
   "/": {
     name: "Home",
-    icon: "🏠",
   },
   "/about": {
     name: "About",
-    icon: "👤",
   },
   "/projects": {
     name: "Projects",
-    icon: "🚀",
   },
   "/contact": {
     name: "Contact",
-    icon: "📧",
   },
 };
 
@@ -28,40 +24,43 @@ export function Navbar() {
   return (
     <aside className="-ml-[8px] mb-16 tracking-tight">
       <div className="lg:sticky lg:top-20">
-        {/* Logo/Brand */}
-        <div className="mb-8">
+        <nav
+          className="flex flex-row items-center justify-between relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
+          id="nav"
+        >          {/* Logo/Brand */}
           <Link
             href="/"
-            className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
+            className="text-2xl font-bold"
+            style={{color: 'var(--text-primary)'}}
           >
             HOONIVERSE
           </Link>
-        </div>
 
-        <nav
-          className="flex flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
-          id="nav"
-        >
-          <div className="flex flex-row space-x-1 pr-10">
-            {Object.entries(navItems).map(([path, { name, icon }]) => {
+          {/* Navigation Menu */}
+          <div className="flex flex-row space-x-1">
+            {Object.entries(navItems).map(([path, { name }]) => {
               const isActive = pathname === path;
               return (
                 <Link
                   key={path}
-                  href={path}
-                  className={`
-                    group relative flex items-center space-x-2 px-3 py-2 rounded-lg transition-all duration-200
+                  href={path}                  className={`
+                    group relative flex items-center px-3 py-2 rounded-lg transition-all duration-200
                     ${
                       isActive
-                        ? "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300"
-                        : "hover:bg-neutral-100 dark:hover:bg-neutral-800 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100"
+                        ? "text-white"
+                        : "hover:bg-opacity-10 hover:bg-gray-500"
                     }
                   `}
+                  style={{
+                    backgroundColor: isActive ? 'var(--color-4)' : 'transparent',
+                    color: isActive ? 'var(--color-1)' : 'var(--text-secondary)'
+                  }}
                 >
-                  <span className="text-sm">{icon}</span>
-                  <span className="font-medium">{name}</span>
-                  {isActive && (
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-blue-500 rounded-full" />
+                  <span className="font-medium">{name}</span>                  {isActive && (
+                    <div 
+                      className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full" 
+                      style={{backgroundColor: 'var(--color-1)'}}
+                    />
                   )}
                 </Link>
               );

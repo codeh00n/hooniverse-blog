@@ -65,9 +65,7 @@ export default function Projects() {
                 <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                   {project.description}
                 </p>
-              </div>
-
-              {/* Project Links */}
+              </div>              {/* Project Links */}
               <div className="flex space-x-3">
                 {project.github && (
                   <Link
@@ -80,7 +78,9 @@ export default function Projects() {
                 {project.driveLink && (
                   <Link
                     href={project.driveLink}
-                    className="flex-1 px-3 py-2 text-sm text-center text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 rounded-lg transition-colors"
+                    className={`px-3 py-2 text-sm text-center text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 rounded-lg transition-colors ${
+                      project.github || project.demo ? 'flex-1' : 'w-full'
+                    }`}
                   >
                     다운로드
                   </Link>

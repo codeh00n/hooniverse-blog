@@ -52,22 +52,15 @@ export default function RootLayout({
         GeistSans.variable,
         GeistMono.variable,
       )}
-      data-oid="hm0ojsk"
     >
-      <body
-        className="antialiased max-w-4xl mx-4 mt-6 lg:mx-auto"
-        data-oid=".0e5kap"
-      >
-        <ThreeBackground data-oid="d_9yyx4" />
-        <main
-          className="flex-auto min-w-0 mt-4 flex flex-col px-1 md:px-4"
-          data-oid="a1at2f8"
-        >
-          <Navbar data-oid="fb9hq7b" />
+      <body className="antialiased max-w-4xl mx-4 mt-6 lg:mx-auto">
+        <ThreeBackground />
+        <main className="flex-auto min-w-0 mt-4 flex flex-col px-1 md:px-4">
+          <Navbar />
           {children}
-          <Footer data-oid="yv4jgee" />
-          <Analytics data-oid="sv-xeuq" />
-          <SpeedInsights data-oid="xg7cbk0" />
+          <Footer />
+          <Analytics />
+          <SpeedInsights />
         </main>
       </body>
     </html>

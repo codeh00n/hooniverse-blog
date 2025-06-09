@@ -22,12 +22,7 @@ function CodeSnippet({ position, code }: CodeSnippetProps) {
   });
 
   return (
-    <Float
-      speed={1.5}
-      rotationIntensity={0.5}
-      floatIntensity={0.5}
-      data-oid="ev3z.rp"
-    >
+    <Float speed={1.5} rotationIntensity={0.5} floatIntensity={0.5}>
       {" "}
       <Text
         ref={mesh}
@@ -36,7 +31,6 @@ function CodeSnippet({ position, code }: CodeSnippetProps) {
         color="#EDF252"
         anchorX="center"
         anchorY="middle"
-        data-oid=":uo9o3h"
       >
         {code}
       </Text>
@@ -80,12 +74,7 @@ function FloatingCodeUniverse() {
   return (
     <>
       {codeSnippets.map((code, i) => (
-        <CodeSnippet
-          key={i}
-          position={positions[i]}
-          code={code}
-          data-oid="g9lpsui"
-        />
+        <CodeSnippet key={i} position={positions[i]} code={code} />
       ))}
     </>
   );
@@ -95,28 +84,18 @@ function Scene() {
   return (
     <>
       {/* 주변 조명 */}
-      <ambientLight intensity={0.4} data-oid="qkbttfc" />
+      <ambientLight intensity={0.4} />
       {/* 포인트 라이트 */}
-      <pointLight
-        position={[10, 10, 10]}
-        intensity={0.8}
-        color="#EDF252"
-        data-oid="50adi.0"
-      />
+      <pointLight position={[10, 10, 10]} intensity={0.8} color="#EDF252" />
 
-      <pointLight
-        position={[-10, -10, -10]}
-        intensity={0.5}
-        color="#BBBF49"
-        data-oid="l7smopw"
-      />
+      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#BBBF49" />
 
       {/* 떠다니는 코드 */}
-      <FloatingCodeUniverse data-oid=":4r1_xf" />
+      <FloatingCodeUniverse />
 
       {/* 배경 파티클 효과 */}
-      <mesh position={[0, 0, -10]} data-oid="earmokj">
-        <sphereGeometry args={[20, 32, 32]} data-oid="z5yal20" />{" "}
+      <mesh position={[0, 0, -10]}>
+        <sphereGeometry args={[20, 32, 32]} />{" "}
         <MeshDistortMaterial
           color="#020126"
           distort={0.1}
@@ -124,7 +103,6 @@ function Scene() {
           roughness={0.8}
           transparent
           opacity={0.3}
-          data-oid="ucneqvv"
         />
       </mesh>
     </>
@@ -133,14 +111,13 @@ function Scene() {
 
 export default function ThreeBackground() {
   return (
-    <div id="three-canvas-container" data-oid="1v.vf21">
+    <div id="three-canvas-container">
       <Canvas
         camera={{ position: [0, 0, 5], fov: 75 }}
         style={{ background: "transparent" }}
-        data-oid="pg-.3u6"
       >
-        <Suspense fallback={null} data-oid="slb2yw6">
-          <Scene data-oid="ml.42lo" />
+        <Suspense fallback={null}>
+          <Scene />
         </Suspense>
       </Canvas>
     </div>

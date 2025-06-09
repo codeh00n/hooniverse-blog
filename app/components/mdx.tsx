@@ -6,14 +6,14 @@ import React from "react";
 
 function Table({ data }) {
   let headers = data.headers.map((header, index) => (
-    <th key={index} data-oid="9-nor.-">
+    <th key={index} data-oid="2kjzgro">
       {header}
     </th>
   ));
   let rows = data.rows.map((row, index) => (
-    <tr key={index} data-oid="4n52ou8">
+    <tr key={index} data-oid="k_j9a46">
       {row.map((cell, cellIndex) => (
-        <td key={cellIndex} data-oid="eudh4s6">
+        <td key={cellIndex} data-oid="qp56el6">
           {cell}
         </td>
       ))}
@@ -21,11 +21,11 @@ function Table({ data }) {
   ));
 
   return (
-    <table data-oid="14vzoq.">
-      <thead data-oid="wn_zusg">
-        <tr data-oid="la7wdn4">{headers}</tr>
+    <table data-oid="rx26gi6">
+      <thead data-oid="bea40yo">
+        <tr data-oid="wiyl119">{headers}</tr>
       </thead>
-      <tbody data-oid="0e.uohb">{rows}</tbody>
+      <tbody data-oid="hy:tlil">{rows}</tbody>
     </table>
   );
 }
@@ -35,14 +35,14 @@ function CustomLink(props) {
 
   if (href.startsWith("/")) {
     return (
-      <Link href={href} {...props} data-oid="82g3_ws">
+      <Link href={href} {...props} data-oid="5c-oqji">
         {props.children}
       </Link>
     );
   }
 
   if (href.startsWith("#")) {
-    return <a {...props} data-oid="8:j_cbt" />;
+    return <a {...props} data-oid="q4up-56" />;
   }
 
   return (
@@ -50,7 +50,7 @@ function CustomLink(props) {
       target="_blank"
       rel="noopener noreferrer"
       {...props}
-      data-oid="tj09lhx"
+      data-oid="c0nhg3b"
     />
   );
 }
@@ -61,7 +61,7 @@ function RoundedImage(props) {
       alt={props.alt}
       className="rounded-lg"
       {...props}
-      data-oid="9mzax60"
+      data-oid="5cc9sx_"
     />
   );
 }
@@ -72,7 +72,7 @@ function Code({ children, ...props }) {
     <code
       dangerouslySetInnerHTML={{ __html: codeHTML }}
       {...props}
-      data-oid="njjxtzl"
+      data-oid="grlvw8x"
     />
   );
 }
@@ -129,7 +129,7 @@ export function CustomMDX(props) {
     <MDXRemote
       {...props}
       components={{ ...components, ...(props.components || {}) }}
-      data-oid="88daqm9"
+      data-oid="sq9nf2j"
     />
   );
 }

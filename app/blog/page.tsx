@@ -7,14 +7,14 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <section data-oid="n2bow2-">
+    <section data-oid="0le2qxr">
       <h1
         className="font-semibold text-2xl mb-8 tracking-tighter"
-        data-oid="wwa4tip"
+        data-oid="bv5nr2t"
       >
         My Blog
       </h1>
-      <BlogPosts data-oid="e_0-wtc" />
+      <BlogPosts data-oid="fe5ogab" />
     </section>
   );
 }

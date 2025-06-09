@@ -59,7 +59,7 @@ export default function Blog({ params }) {
   }
 
   return (
-    <section data-oid="d_xeujz">
+    <section data-oid="ili-qs-">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -81,28 +81,28 @@ export default function Blog({ params }) {
             },
           }),
         }}
-        data-oid="_vocnum"
+        data-oid=":qcz512"
       />
 
       <h1
         className="title font-semibold text-2xl tracking-tighter"
-        data-oid="1gyydr:"
+        data-oid="9o18py9"
       >
         {post.metadata.title}
       </h1>
       <div
         className="flex justify-between items-center mt-2 mb-8 text-sm"
-        data-oid="4fb0ty4"
+        data-oid="x6sr-j:"
       >
         <p
           className="text-sm text-neutral-600 dark:text-neutral-400"
-          data-oid="9m5moqu"
+          data-oid="muz8ssa"
         >
           {formatDate(post.metadata.publishedAt)}
         </p>
       </div>
-      <article className="prose" data-oid="ai:b_6.">
-        <CustomMDX source={post.content} data-oid="01lm5wz" />
+      <article className="prose" data-oid="5z4zcml">
+        <CustomMDX source={post.content} data-oid="8.698pa" />
       </article>
     </section>
   );

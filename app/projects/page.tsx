@@ -29,48 +29,48 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="space-y-8" data-oid="-k-nv74">
+    <section className="space-y-8" data-oid="ztl7-1b">
       {" "}
-      <div data-oid="j:1tnnv">
+      <div data-oid="6albfjp">
         <h1
           className="mb-4 text-3xl font-bold tracking-tight"
-          data-oid="wlckc5u"
+          data-oid="utq4xbv"
         >
           Projects
         </h1>{" "}
-        <p className="text-lg text-[var(--text-secondary)]" data-oid="pys84z5">
+        <p className="text-lg text-[var(--text-secondary)]" data-oid="4m4cfuq">
           제가 개발한 프로젝트들을 소개합니다. 각 프로젝트를 통해 새로운 기술을
           배우고 실무 경험을 쌓고 있습니다.
         </p>
       </div>
       {/* Featured Projects */}
-      <div className="space-y-6" data-oid="n_wwnv4">
+      <div className="space-y-6" data-oid="tau3i2m">
         <h2
           className="text-2xl font-semibold tracking-tight"
-          data-oid="jw.uibk"
+          data-oid="lw4doxs"
         >
           주요 프로젝트
         </h2>
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          data-oid="g0rwvpj"
+          data-oid="iwh-fhg"
         >
           {" "}
           {projects.map((project, index) => (
             <div
               key={index}
               className="group p-6 rounded-xl bg-[var(--color-1)] border border-[var(--color-3)] hover:border-[var(--color-4)] transition-all duration-200 hover:shadow-lg"
-              data-oid="z4tbbi-"
+              data-oid="vyslr6."
             >
               {/* Project Header */}
-              <div className="space-y-2 mb-4" data-oid="65abqre">
+              <div className="space-y-2 mb-4" data-oid="v94bzbl">
                 <div
                   className="flex items-center justify-between"
-                  data-oid="e-:qaie"
+                  data-oid="-h45a31"
                 >
                   <h3
                     className="font-semibold text-lg text-[var(--text-primary)] group-hover:text-[var(--text-secondary)] transition-colors"
-                    data-oid="rkdg:c4"
+                    data-oid="gmfnut1"
                   >
                     {project.title}
                   </h3>
@@ -80,25 +80,25 @@ export default function Projects() {
                         ? "bg-[var(--color-2)] text-[var(--color-5)]"
                         : "bg-[var(--color-3)] text-[var(--color-5)]"
                     }`}
-                    data-oid="hf:bzhn"
+                    data-oid="rmqin-s"
                   >
                     {project.status}
                   </span>
                 </div>
                 <p
                   className="text-sm text-[var(--text-secondary)] leading-relaxed"
-                  data-oid="bcufud7"
+                  data-oid="-7ysubn"
                 >
                   {project.description}
                 </p>
               </div>{" "}
               {/* Project Links */}
-              <div className="flex space-x-3" data-oid="38n45f1">
+              <div className="flex space-x-3" data-oid="_7b8316">
                 {project.github && (
                   <Link
                     href={project.github}
                     className="flex-1 px-3 py-2 text-sm text-center text-[var(--text-primary)] bg-[var(--color-2)] hover:bg-[var(--color-3)] rounded-lg transition-colors"
-                    data-oid="quo6xi_"
+                    data-oid="wksu0ue"
                   >
                     GitHub
                   </Link>
@@ -107,7 +107,7 @@ export default function Projects() {
                   <Link
                     href={project.driveLink}
                     className="flex-1 px-3 py-2 text-sm text-center text-[var(--text-primary)] bg-[var(--color-2)] hover:bg-[var(--color-3)] rounded-lg transition-colors"
-                    data-oid="07q1.dx"
+                    data-oid=":qmtqbf"
                   >
                     다운로드
                   </Link>
@@ -116,7 +116,7 @@ export default function Projects() {
                   <Link
                     href={project.demo}
                     className="flex-1 px-3 py-2 text-sm text-center text-[var(--text-primary)] bg-[var(--color-2)] hover:bg-[var(--color-3)] rounded-lg transition-colors"
-                    data-oid="yn:m5.k"
+                    data-oid="xw2f:ti"
                   >
                     Demo
                   </Link>
@@ -129,22 +129,22 @@ export default function Projects() {
       {/* Call to Action */}
       <div
         className="p-6 rounded-xl bg-[var(--color-2)] border border-[var(--color-3)]"
-        data-oid="bts5w57"
+        data-oid="w.:cm3g"
       >
-        <div className="text-center space-y-4" data-oid="-.n8fl0">
+        <div className="text-center space-y-4" data-oid="3.4oqn-">
           <h3
             className="text-xl font-semibold text-[var(--text-primary)]"
-            data-oid="-nfcryw"
+            data-oid="pgyevxm"
           >
             더 많은 프로젝트
           </h3>
-          <p className="text-[var(--text-secondary)]" data-oid="jn7zt_r">
+          <p className="text-[var(--text-secondary)]" data-oid="t9rgq.n">
             GitHub에서 더 많은 프로젝트와 코드를 확인하실 수 있습니다.
           </p>
           <Link
             href="https://github.com/codeh00n"
             className="inline-flex items-center px-4 py-2 bg-[var(--color-4)] hover:bg-[var(--color-5)] text-[var(--color-1)] rounded-lg transition-colors"
-            data-oid="wa0_5_-"
+            data-oid="9q7j6os"
           >
             GitHub 방문하기 →
           </Link>

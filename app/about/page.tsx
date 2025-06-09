@@ -1,24 +1,24 @@
 export default function About() {
   return (
-    <section className="space-y-8" data-oid="gs_0-i.">
-      <div data-oid="x9:2-tn">
+    <section className="space-y-8" data-oid="pgohrvu">
+      <div data-oid="97sucbs">
         <h1
           className="mb-8 text-3xl font-bold tracking-tight"
-          data-oid="rz2.s60"
+          data-oid="wjkwa15"
         >
           About Me
         </h1>
       </div>
 
       {/* Personal Introduction */}
-      <div className="space-y-6" data-oid="iqsv_kl">
+      <div className="space-y-6" data-oid="m1dmgx4">
         <div
           className="prose prose-neutral dark:prose-invert max-w-none"
-          data-oid="6wi6jfp"
+          data-oid="uob-l1m"
         >
           <p
             className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300"
-            data-oid="v-rqf9-"
+            data-oid="lu:ayxn"
           >
             안녕하세요! 저는 소프트웨어 엔지니어링을 공부하고 있는 한국의
             학생입니다. 웹 개발과 소프트웨어 개발에 깊은 관심을 가지고 있으며,
@@ -28,52 +28,52 @@ export default function About() {
       </div>
 
       {/* Skills Section */}
-      <div className="space-y-6" data-oid="z_4icld">
+      <div className="space-y-6" data-oid="y2c8_ea">
         <h2
           className="text-2xl font-semibold tracking-tight"
-          data-oid="_7zqftx"
+          data-oid="w3mp_4j"
         >
           기술 스택
         </h2>
 
         <div
           className="grid grid-cols-1 md:grid-cols-2 gap-6"
-          data-oid="jtxxxhq"
+          data-oid="l3tlt.z"
         >
-          <div className="space-y-4" data-oid="5aepifu">
+          <div className="space-y-4" data-oid="zmfu-md">
             <h3
               className="text-lg font-medium text-blue-600 dark:text-blue-400"
-              data-oid="0x-zyj_"
+              data-oid="qc5pkgo"
             >
               Frontend
             </h3>
-            <div className="space-y-3" data-oid="8u6g:qf">
+            <div className="space-y-3" data-oid="y82s8l-">
               {[
                 { name: "React", level: 85 },
                 { name: "Next.js", level: 80 },
                 { name: "TypeScript", level: 75 },
                 { name: "Tailwind CSS", level: 90 },
               ].map((skill) => (
-                <div key={skill.name} className="space-y-2" data-oid="76oejfa">
-                  <div className="flex justify-between" data-oid=":.h-mqy">
-                    <span className="text-sm font-medium" data-oid="fv17u.1">
+                <div key={skill.name} className="space-y-2" data-oid="n4tuwv8">
+                  <div className="flex justify-between" data-oid="dl1irt-">
+                    <span className="text-sm font-medium" data-oid=":f1t9tt">
                       {skill.name}
                     </span>
                     <span
                       className="text-sm text-neutral-500"
-                      data-oid="lwtemxp"
+                      data-oid="osx6-tp"
                     >
                       {skill.level}%
                     </span>
                   </div>
                   <div
                     className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2"
-                    data-oid="7h.7omh"
+                    data-oid="duv2mv:"
                   >
                     <div
                       className="bg-blue-500 h-2 rounded-full transition-all duration-1000 ease-out"
                       style={{ width: `${skill.level}%` }}
-                      data-oid="iz.86ss"
+                      data-oid="irhtqv8"
                     />
                   </div>
                 </div>
@@ -81,40 +81,40 @@ export default function About() {
             </div>
           </div>
 
-          <div className="space-y-4" data-oid="s2z5z5t">
+          <div className="space-y-4" data-oid="ey4d4vv">
             <h3
               className="text-lg font-medium text-purple-600 dark:text-purple-400"
-              data-oid="50h_q8u"
+              data-oid="8yioft."
             >
               Backend & Tools
             </h3>
-            <div className="space-y-3" data-oid="y3jj:04">
+            <div className="space-y-3" data-oid="ic7n.sv">
               {[
                 { name: "Node.js", level: 70 },
                 { name: "Python", level: 75 },
                 { name: "Git", level: 85 },
                 { name: "Database", level: 65 },
               ].map((skill) => (
-                <div key={skill.name} className="space-y-2" data-oid="4mtxx:l">
-                  <div className="flex justify-between" data-oid="7bo7vp-">
-                    <span className="text-sm font-medium" data-oid="oofah1l">
+                <div key={skill.name} className="space-y-2" data-oid="7igmjzk">
+                  <div className="flex justify-between" data-oid="us4hjq2">
+                    <span className="text-sm font-medium" data-oid="dxjk5ox">
                       {skill.name}
                     </span>
                     <span
                       className="text-sm text-neutral-500"
-                      data-oid="olgz09i"
+                      data-oid="1nu804z"
                     >
                       {skill.level}%
                     </span>
                   </div>
                   <div
                     className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2"
-                    data-oid="e.1k.mq"
+                    data-oid=":enw8yn"
                   >
                     <div
                       className="bg-purple-500 h-2 rounded-full transition-all duration-1000 ease-out"
                       style={{ width: `${skill.level}%` }}
-                      data-oid="25pedig"
+                      data-oid="r_jgf_f"
                     />
                   </div>
                 </div>
@@ -125,16 +125,16 @@ export default function About() {
       </div>
 
       {/* Interests */}
-      <div className="space-y-6" data-oid="f:_3_e4">
+      <div className="space-y-6" data-oid="s1tt3n1">
         <h2
           className="text-2xl font-semibold tracking-tight"
-          data-oid="6ir-m8y"
+          data-oid=":njus-q"
         >
           관심사
         </h2>
         <div
           className="grid grid-cols-1 md:grid-cols-3 gap-4"
-          data-oid="v_zjgl:"
+          data-oid="ktl8e4q"
         >
           {[
             {
@@ -156,17 +156,17 @@ export default function About() {
             <div
               key={index}
               className="p-6 rounded-xl bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800"
-              data-oid="gmlk7ei"
+              data-oid="m8283:g"
             >
-              <div className="text-3xl mb-3" data-oid="mi8kya6">
+              <div className="text-3xl mb-3" data-oid="9yvet2r">
                 {interest.icon}
               </div>
-              <h3 className="font-semibold mb-2" data-oid="1_6-hr2">
+              <h3 className="font-semibold mb-2" data-oid="ssxh6.n">
                 {interest.title}
               </h3>
               <p
                 className="text-sm text-neutral-600 dark:text-neutral-400"
-                data-oid="t65s1-p"
+                data-oid="0lxlfse"
               >
                 {interest.description}
               </p>
@@ -176,35 +176,35 @@ export default function About() {
       </div>
 
       {/* Education & Experience */}
-      <div className="space-y-6" data-oid="y:rke-p">
+      <div className="space-y-6" data-oid="wfkcz7_">
         <h2
           className="text-2xl font-semibold tracking-tight"
-          data-oid="girhxt1"
+          data-oid="_gv2dl4"
         >
           학습 여정
         </h2>
-        <div className="space-y-4" data-oid="n:8yjud">
+        <div className="space-y-4" data-oid="vz9ci5p">
           <div
             className="border-l-4 border-blue-500 pl-6 py-4"
-            data-oid="0w8nm3."
+            data-oid="6:vd1ur"
           >
             <div
               className="flex items-center space-x-2 mb-2"
-              data-oid="o_tnl_5"
+              data-oid="4c.hc.z"
             >
-              <h3 className="font-semibold" data-oid="gz.dq65">
+              <h3 className="font-semibold" data-oid="pgbo9c7">
                 소프트웨어 엔지니어링 전공
               </h3>
               <span
                 className="px-2 py-1 text-xs bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded"
-                data-oid="8is1bny"
+                data-oid="2ywwwcx"
               >
                 현재
               </span>
             </div>
             <p
               className="text-sm text-neutral-600 dark:text-neutral-400"
-              data-oid="9d7:_0u"
+              data-oid="hl23h3a"
             >
               컴퓨터 과학의 기초부터 실무까지, 체계적인 소프트웨어 개발 방법론을
               학습하고 있습니다.
@@ -213,14 +213,14 @@ export default function About() {
 
           <div
             className="border-l-4 border-green-500 pl-6 py-4"
-            data-oid="y_:poz1"
+            data-oid="qeer0ll"
           >
-            <h3 className="font-semibold mb-2" data-oid="dmm9boy">
+            <h3 className="font-semibold mb-2" data-oid="mh:fiv3">
               개인 프로젝트 개발
             </h3>
             <p
               className="text-sm text-neutral-600 dark:text-neutral-400"
-              data-oid="5wisprr"
+              data-oid="mbr59zx"
             >
               웹 애플리케이션, Unity 게임, AI 도구 활용 프로젝트 등 다양한
               분야의 개발을 통해 실무 경험을 쌓고 있습니다.

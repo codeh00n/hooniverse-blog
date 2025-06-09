@@ -8,9 +8,9 @@
   --color-3: #BBBF49; /* 중간 올리브 그린 */
   --color-4: #737373; /* 중간 회색 */
   --color-5: #0D0D0D; /* 어두운 회색 */
-  
-  /* 기본 텍스트 색상 */
+    /* 기본 텍스트 색상 */
   --text-default: #F2F2F2;
+  --text-muted: #E5E5E5; /* 아주 살짝 어두운 흰색 */
   
   /* Light mode colors */
   --bg-primary: var(--color-5); /* 기본 배경: #0D0D0D */

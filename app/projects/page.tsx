@@ -30,50 +30,49 @@ const projects = [
 export default function Projects() {
   return (
     <section className="space-y-8">
-      {" "}
       <div>
-        <h1 className="mb-4 text-3xl font-bold tracking-tight">Projects</h1>{" "}
-        <p className="text-lg text-[var(--text-secondary)]">
+        <h1 className="mb-4 text-3xl font-bold tracking-tight text-[var(--text-primary)]">Projects</h1>
+        <p className="text-lg text-[var(--text-muted)]">
           제가 개발한 프로젝트들을 소개합니다. 각 프로젝트를 통해 새로운 기술을
           배우고 실무 경험을 쌓고 있습니다.
         </p>
       </div>
-      {/* Featured Projects */}
+        {/* Featured Projects */}
       <div className="space-y-6">
         <h2 className="text-2xl font-semibold tracking-tight">주요 프로젝트</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {" "}
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group p-6 rounded-xl bg-[var(--color-1)] border border-[var(--color-3)] hover:border-[var(--color-4)] transition-all duration-200 hover:shadow-lg"
+              className="group p-6 rounded-xl bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-200 hover:shadow-lg"
             >
               {/* Project Header */}
               <div className="space-y-2 mb-4">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-semibold text-lg text-[var(--text-primary)] group-hover:text-[var(--text-secondary)] transition-colors">
+                  <h3 className="font-semibold text-lg text-neutral-900 dark:text-neutral-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     {project.title}
                   </h3>
                   <span
                     className={`px-2 py-1 text-xs rounded-full ${
                       project.status === "완료"
-                        ? "bg-[var(--color-2)] text-[var(--color-5)]"
-                        : "bg-[var(--color-3)] text-[var(--color-5)]"
+                        ? "bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300"
+                        : "bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300"
                     }`}
                   >
                     {project.status}
                   </span>
                 </div>
-                <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
+                <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
                   {project.description}
                 </p>
-              </div>{" "}
+              </div>
+
               {/* Project Links */}
               <div className="flex space-x-3">
                 {project.github && (
                   <Link
                     href={project.github}
-                    className="flex-1 px-3 py-2 text-sm text-center text-[var(--text-primary)] bg-[var(--color-2)] hover:bg-[var(--color-3)] rounded-lg transition-colors"
+                    className="flex-1 px-3 py-2 text-sm text-center text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 rounded-lg transition-colors"
                   >
                     GitHub
                   </Link>
@@ -81,7 +80,7 @@ export default function Projects() {
                 {project.driveLink && (
                   <Link
                     href={project.driveLink}
-                    className="flex-1 px-3 py-2 text-sm text-center text-[var(--text-primary)] bg-[var(--color-2)] hover:bg-[var(--color-3)] rounded-lg transition-colors"
+                    className="flex-1 px-3 py-2 text-sm text-center text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 rounded-lg transition-colors"
                   >
                     다운로드
                   </Link>
@@ -89,7 +88,7 @@ export default function Projects() {
                 {project.demo && (
                   <Link
                     href={project.demo}
-                    className="flex-1 px-3 py-2 text-sm text-center text-[var(--text-primary)] bg-[var(--color-2)] hover:bg-[var(--color-3)] rounded-lg transition-colors"
+                    className="flex-1 px-3 py-2 text-sm text-center text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 rounded-lg transition-colors"
                   >
                     Demo
                   </Link>
@@ -97,20 +96,21 @@ export default function Projects() {
               </div>
             </div>
           ))}
-        </div>{" "}
-      </div>{" "}
+        </div>
+      </div>
+
       {/* Call to Action */}
-      <div className="p-6 rounded-xl bg-[var(--color-2)] border border-[var(--color-3)]">
+      <div className="p-6 rounded-xl bg-neutral-900 border border-neutral-800">
         <div className="text-center space-y-4">
           <h3 className="text-xl font-semibold text-[var(--text-primary)]">
             더 많은 프로젝트
           </h3>
-          <p className="text-[var(--text-secondary)]">
+          <p className="text-[var(--text-muted)]">
             GitHub에서 더 많은 프로젝트와 코드를 확인하실 수 있습니다.
           </p>
           <Link
             href="https://github.com/codeh00n"
-            className="inline-flex items-center px-4 py-2 bg-[var(--color-4)] hover:bg-[var(--color-5)] text-[var(--color-1)] rounded-lg transition-colors"
+            className="inline-flex items-center px-4 py-2 bg-[var(--color-2)] hover:bg-[var(--color-3)] text-[var(--background)] rounded-lg transition-colors"
           >
             GitHub 방문하기 →
           </Link>

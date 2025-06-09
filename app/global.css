@@ -2,52 +2,55 @@
 
 /* Custom Color Palette */
 :root {
-  /* Grayscale Design Colors */
-  --color-1: #F2F2F2; /* 가장 밝은 회색 */
-  --color-2: #A6A6A6; /* 중간 밝은 회색 */
-  --color-3: #737373; /* 중간 회색 */
-  --color-4: #404040; /* 중간 어두운 회색 */
-  --color-5: #0D0D0D; /* 가장 어두운 회색 */
+  /* Agrilo AI-Powered Agritech App Color Palette */
+  --color-1: #020126; /* 가장 어두운 네이비 블루 */
+  --color-2: #EDF252; /* 밝은 라임 그린 */
+  --color-3: #BBBF49; /* 중간 올리브 그린 */
+  --color-4: #737373; /* 중간 회색 */
+  --color-5: #0D0D0D; /* 어두운 회색 */
+  
+  /* 기본 텍스트 색상 */
+  --text-default: #F2F2F2;
   
   /* Light mode colors */
-  --bg-primary: var(--color-1);
-  --bg-secondary: #FFFFFF;
-  --text-primary: var(--color-5);
-  --text-secondary: var(--color-4);
-  --text-tertiary: var(--color-3);
-  --border-color: var(--color-2);
+  --bg-primary: var(--color-5); /* 기본 배경: #0D0D0D */
+  --bg-secondary: var(--color-1);
+  --text-primary: var(--text-default);
+  --text-secondary: var(--color-2);
+  --text-tertiary: var(--color-4);
+  --border-color: var(--color-3);
   
   /* Syntax highlighting for light mode */
-  --sh-class: var(--color-4);
-  --sh-identifier: var(--color-5);
-  --sh-sign: var(--color-3);
-  --sh-string: var(--color-4);
-  --sh-keyword: var(--color-5);
-  --sh-comment: var(--color-3);
-  --sh-jsxliterals: var(--color-4);
-  --sh-property: var(--color-5);
-  --sh-entity: var(--color-5);
+  --sh-class: var(--color-2);
+  --sh-identifier: var(--text-default);
+  --sh-sign: var(--color-4);
+  --sh-string: var(--color-2);
+  --sh-keyword: var(--color-3);
+  --sh-comment: var(--color-4);
+  --sh-jsxliterals: var(--color-2);
+  --sh-property: var(--text-default);
+  --sh-entity: var(--color-2);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     /* Dark mode colors */
-    --bg-primary: var(--color-5);
-    --bg-secondary: var(--color-4);
-    --text-primary: var(--color-1);
+    --bg-primary: var(--color-5); /* 기본 배경: #0D0D0D */
+    --bg-secondary: var(--color-1);
+    --text-primary: var(--text-default);
     --text-secondary: var(--color-2);
-    --text-tertiary: var(--color-3);
-    --border-color: var(--color-3);
+    --text-tertiary: var(--color-4);
+    --border-color: var(--color-4);
     
     /* Syntax highlighting for dark mode */
     --sh-class: var(--color-2);
-    --sh-identifier: var(--color-1);
-    --sh-keyword: var(--color-1);
+    --sh-identifier: var(--text-default);
+    --sh-keyword: var(--color-3);
     --sh-string: var(--color-2);
-    --sh-comment: var(--color-3);
+    --sh-comment: var(--color-4);
     --sh-jsxliterals: var(--color-2);
-    --sh-property: var(--color-1);
-    --sh-entity: var(--color-1);
+    --sh-property: var(--text-default);
+    --sh-entity: var(--color-2);
   }
   html {
     color-scheme: dark;
@@ -66,7 +69,8 @@ html {
 /* Three.js 배경 관련 스타일 */
 body {
   position: relative;
-  background: var(--color-5); /* 가장 어두운 회색 배경 */
+  background: var(--color-5); /* 기본 배경: #0D0D0D */
+  color: var(--text-default); /* 기본 텍스트: #F2F2F2 */
 }
 
 /* Three.js Canvas 컨테이너 */

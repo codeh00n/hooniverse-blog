@@ -21,12 +21,11 @@ function CodeSnippet({ position, code }: CodeSnippetProps) {
   });
 
   return (
-    <Float speed={1.5} rotationIntensity={0.5} floatIntensity={0.5}>
-      <Text
+    <Float speed={1.5} rotationIntensity={0.5} floatIntensity={0.5}>      <Text
         ref={mesh}
         position={position}
         fontSize={0.3}
-        color="#4a90e2"
+        color="#EDF252"
         anchorX="center"
         anchorY="middle"
       >
@@ -78,19 +77,17 @@ function Scene() {
     <>
       {/* 주변 조명 */}
       <ambientLight intensity={0.4} />
-      
-      {/* 포인트 라이트 */}
-      <pointLight position={[10, 10, 10]} intensity={0.8} color="#4a90e2" />
-      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#9333ea" />
+        {/* 포인트 라이트 */}
+      <pointLight position={[10, 10, 10]} intensity={0.8} color="#EDF252" />
+      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#BBBF49" />
       
       {/* 떠다니는 코드 */}
       <FloatingCodeUniverse />
       
       {/* 배경 파티클 효과 */}
       <mesh position={[0, 0, -10]}>
-        <sphereGeometry args={[20, 32, 32]} />
-        <MeshDistortMaterial
-          color="#000814"
+        <sphereGeometry args={[20, 32, 32]} />        <MeshDistortMaterial
+          color="#020126"
           distort={0.1}
           speed={0.5}
           roughness={0.8}

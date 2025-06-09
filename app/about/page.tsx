@@ -59,6 +59,7 @@ export default function About() {
             <div className="space-y-3">
               {[
                 { name: "Python", level: 65 },
+                { name: "C#", level: 55 },
                 { name: "After Effects", level: 55 },
                 { name: "Unity", level: 60 },
                 { name: "Node.js", level: 55 },

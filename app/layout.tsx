@@ -44,21 +44,30 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (    <html
+  return (
+    <html
       lang="en"
       className={cx(
         "text-[var(--text-primary)] bg-[var(--bg-secondary)] dark:text-[var(--text-primary)] dark:bg-[var(--bg-primary)]",
         GeistSans.variable,
         GeistMono.variable,
       )}
-    ><body className="antialiased max-w-4xl mx-4 mt-6 lg:mx-auto">
-        <ThreeBackground />
-        <main className="flex-auto min-w-0 mt-4 flex flex-col px-1 md:px-4">
-          <Navbar />
+      data-oid="b7.a-ws"
+    >
+      <body
+        className="antialiased max-w-4xl mx-4 mt-6 lg:mx-auto"
+        data-oid="gnu24q8"
+      >
+        <ThreeBackground data-oid="30zte77" />
+        <main
+          className="flex-auto min-w-0 mt-4 flex flex-col px-1 md:px-4"
+          data-oid="gswf:h-"
+        >
+          <Navbar data-oid="r50zqzk" />
           {children}
-          <Footer />
-          <Analytics />
-          <SpeedInsights />
+          <Footer data-oid="5raw5hr" />
+          <Analytics data-oid="wlih:kq" />
+          <SpeedInsights data-oid="srxanmc" />
         </main>
       </body>
     </html>
